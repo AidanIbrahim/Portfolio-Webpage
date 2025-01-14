@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <title>Dominoes Engine Project</title>
+ </head>
+<body>
+    <h1>Dominoes Engine Project</h1>
+    <h2><a href="https://github.com/AidanIbrahim/Dominoes-AI-Project"> Github Reposository</a></h2>
+    <h3>Overview:</h3>
+    <p>Dominoes is a very prevalent game in my culture, which inspired me to want to see if I could create an AI model to play 2 Player dominoes. 
+    In Puerto Rico, Dominoes is a very popular pastime. I have fond memories of playing with my Mother and Abuela. Despite being a simple game, there is lots of strategy and 
+    deduction involved higher level play, which spurred my interest in creating an AI player to try and develop stratagies.</p>
+    <h3>Rules:</h3>
+    <p>Dominoes is a popular game across the Carribean as well as in other Latin Countries, with many regional variations. I will quickly detail the rules I used, but if you want a
+        more comprehensive overview, <a href="https://www.dominorules.com/straight-dominoes">click here.</a> At the beginning of the game each player draws 7 dominoes, the player
+        with the highest value double goes first. If neither player has a double, the player with the most valueble domino goes first. Players then alternate placing dominoes on
+        one of the two sides, playing a domino with a matching suit. If a player cannot play, they must draw dominoes until they can, or pass if there are no dominoes left to 
+        draw. The first player to empty their hand wins, earns points equal to the total value of other players remaining dominoes. There are some special ways to win, namely 
+        a Chuchazo, where the winning domino is a double blank, or the Capicú where the winning domino can be played on either ends and is not a Double. These both award 100
+        bonus points.
+    </p>
+    <h3>Libraries Used:</h3>
+    <p>Pandas, Pygame, PyGAD</p>
+    <h3>Data from Simulations:</h3>
+    <img src="../assets/images/WinrateSheet.png" width="800" /> <br />
+    <p>This Spreadsheet demonstrates the win rates in matches between the different AI models I developed. I started with a random opponent as a baseline, then developed more 
+        stratagies ranging from simple to more complex.
+    </p>
+    <h3>Models:</h3>
+    <h4>Random:</h4>
+    <p style="text-indent: 25px;"> This agent simply plays a random legal move, this is what I used as a baseline to measure agent performance.</p>
+    <h4>HighestFirst</h4>
+    <p style="text-indent: 25px;"> This agent simply plays a random legal move, this is what I used as a baseline to measure agent performance.</p>
+    <h4>CommonSuit</h4>
+    <p style="text-indent: 25px;"> This agent scores moves based on amount of dominoes with matching suits after it is played. The first "rational agent".</p>
+    <h4>CommonSuitV2</h4>
+    <p style="text-indent: 25px;"> A massive improvement over the first version, this model has many parameters to weigh potential moves such as matches, 
+        if the opponent has passed on a suit recently, if the move is a force play, or if the domino is a double blank. Currently my strongest model.
+    </p>
+</body>

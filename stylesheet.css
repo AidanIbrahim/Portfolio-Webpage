@@ -1,0 +1,15 @@
+body { 
+    background-color: #638475;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.stdImage {
+    border-radius: 50px;
+    background:  #638475;
+    padding: 20px;
+    width: 400px;
+  }
+  
+hr {
+    border-color: #010301;
+}
