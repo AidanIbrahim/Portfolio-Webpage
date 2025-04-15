@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <style>
+      body {
+        background-color: #a4cffb; /* Pale blue */
+        color: #222831;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 40px;
+        line-height: 1.6;
+      }
+  
+      h1, h2, h3, h4 {
+        color: #1a3c6b;
+      }
+  
+      a {
+        color: #3b7dd8;
+        text-decoration: none;
+      }
+  
+      a:hover {
+        text-decoration: underline;
+      }
+  
+      img {
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border: 2px solid #a6c1e2;
+      }
+  
+      code {
+        background-color: #d9eaf7;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-size: 0.95em;
+      }
+  
+      p {
+        text-indent: 25px;
+      }
+    </style>
+    <title>Dominoes Engine Project</title>
+  </head>
+  
+<body>
+    <h1>Connect Four Linux Module</h1>
+    <h2><a href="https://github.com/AidanIbrahim/Connect-4-Kernel-Module"> GitHub Repository</a></h2>
+    <h3>Overview:</h3>
+    <p style="text-indent: 25px;">
+      To practice working within the Linux Kernel, I developed this module which can be loaded directly into a standard Linux kernel. It uses the character device <code>/dev/fourinarow</code>
+      to manage game state and input. The module supports read/write access from all users and allows the game to be played entirely from the terminal without needing to run a separate program.
+    </p>
+
+    <h3>Rules:</h3>
+    <p style="text-indent: 25px;">
+      For a quick guide on how to play Connect Four, check out this <a href="https://youtu.be/ylZBRUJi3UQ">video</a>. In this implementation, yellow always takes the first move.
+    </p>
+
+    <h3>Module Commands:</h3>
+    <p style="text-indent: 25px;">
+      <strong>RESET (X or Y):</strong> Resets the board and assigns the selected color to the player.
+    </p>
+    <p style="text-indent: 25px;">
+      <strong>DROPC $:</strong> Where <code>$</code> represents the target column letter. This command works only during the player's turn.
+    </p>
+    <p style="text-indent: 25px;">
+      <strong>BOARD:</strong> Outputs the current board state to <code>/dev/fourinarow</code>. Use <code>cat</code> to view it.
+    </p>
+    <p style="text-indent: 25px;">
+      <strong>CTURN:</strong> Allows the computer to take its turn. Only valid when it's the computer's move.
+    </p>
+
+    <h3>Extras:</h3>
+    <p style="text-indent: 25px;">
+      While the character device can be interacted with using standard terminal commands like <code>echo</code> and <code>cat</code>, there's also a user-space program included called <code>connect4user</code>.
+      This simplifies interactions, allowing you to just type commands directly. It also provides colorful board display using UTF characters.
+    </p>
+    <img src="../assets/images/Connect4.png" width="300" /> <br />
+
+    <h3>Connect 4 Engine:</h3>
+    <h4>Overview:</h4>
+    <p style="text-indent: 25px;">
+      This module includes an AI engine that acts as the computer player. It's designed from scratch to operate efficiently within kernel space, using minimal resources and no auxiliary data structures.
+    </p>
+
+    <h4>How does it work?</h4>
+    <p style="text-indent: 25px;">
+      Due to the limitations of kernel space, I aimed to design a bot that requires no extra memory overhead. Connect Four’s simplicity allows for an effective AI using basic evaluation heuristics.
+      On each turn, the AI evaluates all seven possible columns. It assigns scores to each move based on several factors, with bonuses for longer consecutive chains of matching pieces.
+    </p>
+    <p style="text-indent: 25px;">
+      Winning moves receive a very high score to ensure they're prioritized. The same logic is reused for blocking: it simulates the opponent’s potential moves and blocks those with high threat scores.
+      This makes the AI function effectively both offensively and defensively by always choosing the move with the highest combined score. While it is fairly strong, it does not possess the ability to look multiple moves ahead,
+      and is prone to misakes that require some foresight to see.
+    </p>
+
+</body>
+</html>

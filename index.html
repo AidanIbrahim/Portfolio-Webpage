@@ -1,38 +1,109 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheet.css" />
-    <title>Aidan Ibrahim</title>
- </head>
- <body>
-   <div>
-      <h1>Aidan Ibrahim</h1>
-      <h2>About Me:</h2>
-      <p> Hey, thanks for checking out my page! I'm a junior studying Computer Science at the University of Maryland, Baltimore County.
-         Outside of work and studying, I'm a bass guitarist, and I also enjoy board games. After school I hope to find a job in the AI/ML 
-         field, or work on a Masters Program in the subject, as it is something I find quite interesting. Though I'm also trying to develop my
-         front end and web development skills as well.
-      </p>
-   </div>
-   <hr />
-   <h2>Education:</h2>
-   <p>University of Maryland, Baltimore County, GPA 3.28 Expected graduation May 2026</p>
-   <p>Expected graduation May 2026</p>
-   <h2>Project Portfolio:</h2>
-    <h4 style="margin-bottom: 0px;"><a href="./public/Dominoes.html">Dominoes Engine</a></h4>
-    <ul>
-      <li>A Dominoes agent that I developed.</li>
-    </ul>
-    <img class="stdImage" src="./assets/images/DominosSS.png" alt="Image of Dominoes Agents playing a round" height="200"/>
-    <h4><a href="./public/birthday-invite.html">Birthday Invite Project</a></h4>
-    <ul>
-      <li>An basic HTML page I created.</li>
-    </ul>
-    <img class="stdImage" src="./assets/images/birthday-invite.png" alt="Image of Birthday Invite Webpage" height="400"/>
-    <br />
-    <a href="./public/contact.html">Contact Me</a> <a href="./assets/Docs/AidanIbrahimResumeS.pdf"> Resume</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./stylesheet.css" />
+  <title>Aidan Ibrahim</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
 
- </body>
- </html>
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: #dddddd;
+    }
+
+    h4 {
+      margin-top: 30px;
+      margin-bottom: 5px;
+      color: #cccccc;
+    }
+
+    p, li {
+      text-indent: 25px;
+      line-height: 1.6;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #444;
+    }
+
+    .stdImage {
+      display: block;
+      margin: 10px auto 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    a {
+      color: #66b2ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-links {
+      margin-top: 20px;
+    }
+
+    .nav-links a {
+      margin-right: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Aidan Ibrahim</h1>
+    <h2>About Me:</h2>
+    <p>
+      Hey, thanks for checking out my page! I'm a junior studying Computer Science at the University of Maryland, Baltimore County.
+      Outside of work and studying, I'm a bass guitarist and a board game enthusiast. After graduation, I hope to find a job in the AI/ML field
+      or pursue a Master's program in the subject—it's something I find really fascinating. I'm also working on developing my frontend and web
+      development skills along the way.
+    </p>
+  </div>
+
+  <hr />
+
+  <h2>Education:</h2>
+  <p>
+    University of Maryland, Baltimore County <br />
+    GPA: 3.28 &nbsp; | &nbsp; Expected Graduation: May 2026
+  </p>
+
+  <h2>Project Portfolio:</h2>
+
+  <h4><a href="./public/Dominoes.html">Dominoes Engine</a></h4>
+  <ul>
+    <li>A rule-based and simulation-backed dominoes agent written in C++ with a Pygame UI.</li>
+  </ul>
+  <img class="stdImage" src="./assets/images/DominosSS.png" alt="Image of Dominoes Agents playing a round" height="250" />
+
+  <h4><a href="./public/Connect4Module.html">Connect Four Linux Module</a></h4>
+  <ul>
+    <li>A Linux kernel module that lets you play Connect Four directly from the terminal using /dev.</li>
+  </ul>
+  <img class="stdImage" src="./assets/images/Connect4.png" alt="Image of Connect Four Linux Module" height="400" />
+
+  <div class="nav-links">
+    <a href="./public/contact.html">Contact Me</a>
+    <a href="./assets/Docs/AidanIbrahimResumeS.pdf">Resume</a>
+  </div>
+</body>
+</html>

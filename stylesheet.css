@@ -1,15 +1,48 @@
-body { 
-    background-color: #638475;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+body {
+    background-color: #1e2a38; /* Dark navy background */
+    color: #f0f2f5; /* Light text for contrast */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 40px;
 }
 
+/* Images styled more cleanly */
 .stdImage {
-    border-radius: 50px;
-    background:  #638475;
-    padding: 20px;
-    width: 400px;
-  }
-  
+    display: block;
+    margin: 20px auto;
+    border-radius: 16px;
+    background: none;
+    padding: 0;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid #3a506b;
+}
+
+/* Headings and links */
+h1, h2, h3, h4 {
+    color: #e0e6ed;
+}
+
+a {
+    color: #76c0ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HR line for subtle separation */
 hr {
-    border-color: #010301;
+    border: none;
+    height: 1px;
+    background-color: #33475b;
+    margin: 40px 0;
+}
+
+/* Optional: add a little breathing room around paragraphs and list items */
+p, li {
+    text-indent: 25px;
+    line-height: 1.6;
 }
